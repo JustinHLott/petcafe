@@ -4,57 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoyo Detail: Virtual Pet Cafe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <header>
-        <nav>
-          <figure>
-            <img src="IMG/Ralph.jpg" alt="Ralph age 8" Height="300">
-            <figcaption>Virtual Pet Cafe</figcaption>
-          </figure>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pet-list.html">Meet our Virtual Pets</a></li>
-            <li><a href="pet-create.html">Create My Pet</a></li>
-            <li><a href="#">View My Pets</a></li>
-          </ul>
-        </nav>
-      </header>
+<body class="bg-light">
+    <header class="bg-secondary pt-4 ps-4">
+      <nav class="navbar">
+        <figure class="navbar-brand">
+          <img class="rounded-circle" src="IMG/Ralph.jpg" alt="Ralph age 8" Height="300">
+          <figcaption class="text-white">Virtual Pet Cafe</figcaption>
+        </figure>
+        <ul class="nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="index.html">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="pet-list.html">Meet our Virtual Pets</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="pet-create.html">Create My Pet</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">View My Pets</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <Main>
-        <h1>Meet Yoyo</h1>
-        <figure>
-            <img src="IMG/Gayle.jpg" alt="Gayle Age 12" height = "300">
-            <figcaption>Gayle Age 12</figcaption>
-        </figure>
-        <section>
-            <h2>About Me</h2>
-            <p>Pet type: Cat</p>
-            <p>Breed: Tabby</p>
-            <p>Temperment: Gentle</p>
-
-        </section>
-        <section>
-            <H2>Fun Facts</H2>
-            <ul>
-                <li>Yoyo loves to snuggle on your lap after a long day. He'll curl in a ball and nap.</li>
-                <li>His favorite toy is anything containing catnip.</li>
-                <li>At night, he sleeps at the foot of the bed.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>My Story</h2>
-            <p>I was adopted from a shelter and was so happy to find a home</p>
-            <p>My brother Vanny is also here, but we don't get a long.</p>
-            <p>I am exceptionally smart.
-                If I want to leave the cafe and go to my home upstairs, I walk past the video doorbell until it makes a funny noise then I wait until one of my humans opens the door for me. I've trained them well.
-            <div>If I'm <em>lonely</em>, I meow loudly.</div>
-            <div>When <span>I'm hungry</span>, I stand by my bowl</div>
-            </p>
-        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="text-secondary">Meet Yoyo</h1>
+                    <figure>
+                        <img class="rounded-circle detail-image" src="IMG/Gayle.jpg" alt="Gayle Age 12" height = "300">
+                        <figcaption>Gayle Age 12</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-6 mt-auto">
+                    <section>
+                        <h2 class="text-secondary">About Me</h2>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Pet type:</td>
+                                    <td class="fw-bold">Cat</td>
+                                </tr>
+                                <tr>
+                                    <td>Breed:</td>
+                                    <td class="fw-bold">Tabby</td>
+                                </tr>
+                                <tr>
+                                    <td>Temperment:</td>
+                                    <td class="fw-bold">Gentle</td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+    <div class="row">
+        <div class="col-md-8">
+            <section>
+                <h2 class="text-secondary pt-2">My Story</h2>
+                <p>I was adopted from a shelter and was so happy to find a home</p>
+                <p>My brother Vanny is also here, but we don't get a long.</p>
+                <p>I am exceptionally smart.
+                    If I want to leave the cafe and go to my home upstairs, I walk past the video doorbell until it makes a funny noise then I wait until one of my humans opens the door for me. I've trained them well.
+                <div>If I'm <em>lonely</em>, I meow loudly.</div>
+                <div>When <span class="text-info fw-bold">I'm hungry</span>, I stand by my bowl</div>
+                </p>
+            </section>
+        </div>
+            <div class="col-md-4">
+                <section class="border border-2 border-secondary">
+                    <H2 class="text-light bg-secondary p-2">Fun Facts</H2>
+                    <ul>
+                        <li>Yoyo loves to snuggle on your lap after a long day. He'll curl in a ball and nap.</li>
+                        <li>His favorite toy is anything containing catnip.</li>
+                        <li>At night, he sleeps at the foot of the bed.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
     </Main>
-    <footer>
+    <footer class="border-top border-light mt-4 fw-light">
+        <div class="container-fluid">
         All content on this site &copy;Copyright - Virtual Pet Cafe, Inc
-    </footer>
+        </div>
+      </footer>
 </body>
 </html>

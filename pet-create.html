@@ -5,74 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create My Pet: Virtual Pet Cafe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body>
-    <header>
-        <nav>
-            <figure>
-                <img src="IMG/Ralph.jpg" alt="Ralph age 8" Height="300">
-                <figcaption>Virtual Pet Cafe</figcaption>
-            </figure>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pet-list.html">Meet our Virtual Pets</a></li>
-                <li><a href="pet-create.html">Create My Pet</a></li>
-                <li><a href="#">View My Pets</a></li>
-            </ul>
-        </nav>
+<body class="bg-light">
+    <header class="bg-secondary pt-4 ps-4">
+      <nav class="navbar">
+        <figure class="navbar-brand">
+          <img class="rounded-circle" src="IMG/Ralph.jpg" alt="Ralph age 8" Height="300">
+          <figcaption class="text-white">Virtual Pet Cafe</figcaption>
+        </figure>
+        <ul class="nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="index.html">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="pet-list.html">Meet our Virtual Pets</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="pet-create.html">Create My Pet</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">View My Pets</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <h1>Create a Custom Virtual Pet</h1>
+        <div class="container">
+        <h1 class="text-secondary">Create a Custom Virtual Pet</h1>
         <form action="" method="get">
-            <p>
-                <label for="name">Pet's name:</label>
-                <input type="text" id="name" name="pet-name" required>
-            </p>
-            <fieldset>
-                <legend>What type of pet?</legend>
-
-                <input type="radio" id="dog" name="pet-type" value="dog">
-                <label for="dog">Dog</label>
-                <input type="radio" id="cat" name="pet-type" value="cat">
-                <label for="cat">Cat</label>
-            </fieldset>
-            <p>
-                <label for="breed">Pet's breed:</label>
-                <select id="breed" name="ped-breed">
-                    <option value="calico">Calico</option>
-                    <option value="tabby">Tabby</option>
-                    <option value="corgi">Corgi</option>
-                </select>
-            </p>
-            <p>
-                <label for="adoption-date">Virtual adoption date:</label>
-                <input type="date" id="adoption-date" name="pet-adoption-date">
-            </p>
-            <p>
-                <label for="age">Pet's age:</label>
-                <input type="number" id="age" name="pet-age">
-            </p>
-            <p>
-                <label for="backstory">Pet's backstory:</label>
-                <textarea id="backstory" rows="5" name="pet-backstory" placeholder="Enter backstory here."></textarea>
-            </p>
-            <p>
-                <label for="owners-email">Owner's email address:</label>
-                <input type="email" id="owners-email" name ="owner-email">
-            </p>
-            <p>
-                <input type="checkbox" id="mailing-list" name="add-to-mailing-list" value="true">
-                <label for="mailing-list">Add me to your mailing list.</label>
-            </p>
-            <p>
-                <button>Save this pet</button>
-            </p>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <label class="form-label" for="name">Pet's name:</label>
+                    <input class = "form-control" type="text" id="name" name="pet-name" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="adoption-date">Virtual adoption date:</label>
+                    <input class="form-control" type="date" id="adoption-date" name="pet-adoption-date">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <fieldset>
+                        <legend class="col-form-label p-0">What type of pet?</legend>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="dog" name="pet-type" value="dog">
+                            <label class="form-check-label" for="dog">Dog</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="cat" name="pet-type" value="cat">
+                            <label class="form-check-label" for="cat">Cat</label>
+                        </div>
+                    </fieldset>
+                        <label class="form-label mt-4" for="breed">Pet's breed:</label>
+                        <select class="form-select" id="breed" name="ped-breed">
+                            <option value="calico">Calico</option>
+                            <option value="tabby">Tabby</option>
+                            <option value="corgi">Corgi</option>
+                        </select>
+                        <label class="form-label mt-4" for="age">Pet's age:</label>
+                        <input class="form-control" type="number" id="age" name="pet-age">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label" for="backstory">Pet's backstory:</label>
+                    <textarea class="form-control" id="backstory" rows="8" name="pet-backstory" placeholder="Enter backstory here."></textarea>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <label class="form-label" for="owners-email">Owner's email address:</label>
+                    <input class="form-control" type="email" id="owners-email" name ="owner-email">
+                    <div class="form-check mt-3">
+                        <input class="form-check-input" type="checkbox" id="mailing-list" name="add-to-mailing-list" value="true">
+                        <label class="form-check-label" for="mailing-list">Add me to your mailing list.</label>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <button class="btn btn-secondary">Save this pet</button>
+                </div>
+            </div>
         </form>
+    </div>
     </main>
-    <footer>
+    <footer class="border-top border-light mt-4 fw-light">
+        <div class="container-fluid">
         All content on this site &copy;Copyright - Virtual Pet Cafe, Inc
-    </footer>
+        </div>
+      </footer>
 </body>
 
 </html>
